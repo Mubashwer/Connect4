@@ -1,0 +1,60 @@
+Project 2B
+Mubashwer Salman Khurshid (mskh, 601738)
+
+1. A and B is only susceptible to "surreptitious forwarding". 
+If Person X sends a message to Person Y, Person Y may decrypt the message
+and re-encrypt the message with Person Z's public key and have it sent to
+Person Z. Person Z will now think that this message was meant for him/her
+and was sent by Person X. This can be easily ELIMINATED by prepending the
+name of the recipient in the message, so A and B are SECURE and neither is 
+the answer to the question.
+
+For C, an intruder can intercept a message and sign E with his own private
+(signing) key and swap the signature from the message with his own signature
+and then have it sent instead.
+He can then claim authorship/take credit of the message that is sent.
+This is a serious security threat because if Person X and Y are users but only
+Person X has the root password, Person Y may intercept the login message sent
+by Person X and replace the signature with his own and have it sent instead
+and now the server may grant full server access to Person Y instead
+
+Therefore, OPTION C has a serious security problem and so it is my answer.
+
+
+
+2. Compression is a reduction in the number of bits needed to represent data.
+It is generally done by recognising and taking advantage of repetitions or
+any patterns. When you encrypt a message, you usually get a shorter and very
+random hash. Therefore its pointless to compress then as there would be no
+patterns in it, so there wouldn't be much of a size reduction after
+compression. So it's best to compress first and then encrypt in so that 
+compression can work most effectively.
+
+
+
+3. I am assuming that only one key can be tested at a time since information
+regarding this is not given.
+
+a. 128-bit key permuations = 2^(128)
+Time taken to decrypt a sentence with all permuations = 2^(128) * 10^(-16)s
+Number of seconds in a year =  365 * 24 * 60 * 60 = 31536000
+It would take (2^(128) * 10^(-6))/31536000 years i.e. 1.0790283e+25 years
+
+a) 1.0790283e+25 years
+
+b. 256-bit key permuations = 2^(128)
+It would take (2^(256) * 10^(-6))/31536000 years i.e. 3.6717431e+63 years
+
+b) 3.6717431e+63 years
+
+c. Milliseconds in a day = 24 * 60 * 60 * 10^(3) =  86400000
+It would take (86400000 * 10^(-6)) seconds i.e 86.4 seconds
+
+c) 86.4 seconds
+
+d. Milliseconds in a millenium = 1000 *24 * 365 * 60 * 60 *10^(3) 
+                               = 31536000000000
+It would take (31536000000000 * 10^(-6))/31536000 = 1 year
+
+d) 1 year
+ 
