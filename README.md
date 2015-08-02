@@ -23,7 +23,7 @@ To run your client program on your server
 
 prompt: ./client localhost [port number]
 
-To run your client program on a dierent host machine
+To run your client program on a different host machine
 
 prompt: ./client [host name/IP address] [port number]
 
